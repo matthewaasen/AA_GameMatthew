@@ -6,7 +6,7 @@ public class SpokeController : MonoBehaviour
 {
     public float throwSpeed = 1f; // Speed of rotation in degrees per second
     public float offset;
-    private bool onMiddle;
+    public bool onMiddle;
     private GameObject circle;
     private bool moving;
     
@@ -14,7 +14,6 @@ public class SpokeController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        onMiddle = false;
         circle = GameObject.Find("Circle");
     }
 
@@ -33,7 +32,7 @@ public class SpokeController : MonoBehaviour
 
             if (moving)
             {
-                transform.Translate(Vector3.up * Time.deltaTime * throwSpeed);
+                transform.Translate(-Vector3.down * Time.deltaTime * throwSpeed);
             }
 
             if (transform.position.y > offset)
@@ -41,6 +40,14 @@ public class SpokeController : MonoBehaviour
                 moving = false;
                 transform.SetParent(circle.transform);
                 onMiddle = true;
+                circle.GetComponent<CircleController>().ammoLeft--;
+                if(circle.GetComponent<CircleController>().ammoLeft > 0)
+                {
+                    //create new Ammo
+                    GameObject ammo = Instantiate(gameObject, new Vector2(0, -2f), new Quaternion(0, 0, 0, 0));
+                    ammo.GetComponent<SpokeController>().onMiddle = false;
+                    circle.GetComponent<CircleController>().ammoLeft--;
+                }
             } 
         }
         
