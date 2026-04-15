@@ -44,7 +44,7 @@ public class SpokeController : MonoBehaviour
                 if(circle.GetComponent<CircleController>().ammoLeft > 0)
                 {
                     //create new Ammo
-                    GameObject ammo = Instantiate(gameObject, new Vector2(0, -2f), new Quaternion(0, 0, 0, 0));
+                    GameObject ammo = Instantiate(circle.GetComponent<CircleController>().spokePrefab, new Vector2(0, -2f), Quaternion.identity);
                     ammo.GetComponent<SpokeController>().onMiddle = false;
                     circle.GetComponent<CircleController>().ammoLeft--;
                 }

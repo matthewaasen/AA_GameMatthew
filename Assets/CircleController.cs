@@ -11,11 +11,12 @@ public class CircleController : MonoBehaviour
     public float[][] levels = new float[][]
     {
         //level, spokes, ammo, speed, direction
-        new float[] {1, 10, 5, 100, 1}
+        new float[] {1, 2, 2, 50, 1}
     };
     public int level;
     public int ammoLeft;
-    
+    public TMPro.TextMeshProUGUI ammoText;
+    public TMPro.TextMeshProUGUI levelText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,6 +60,8 @@ public class CircleController : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
+        ammoText.text = ammoLeft.ToString();
+        levelText.text = "Level: " + (level + 1).ToString();
     }
 
     public void StartGame()
