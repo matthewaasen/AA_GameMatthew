@@ -17,6 +17,16 @@ public class SpokeController : MonoBehaviour
         circle = GameObject.Find("Circle");
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Spoke" && other.GetComponent<SpokeController>().onMiddle)
+        {
+            //Game Over
+            GameData.level = -2;
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -46,9 +56,15 @@ public class SpokeController : MonoBehaviour
                     //create new Ammo
                     GameObject ammo = Instantiate(circle.GetComponent<CircleController>().spokePrefab, new Vector2(0, -2f), Quaternion.identity);
                     ammo.GetComponent<SpokeController>().onMiddle = false;
-                    circle.GetComponent<CircleController>().ammoLeft--;
+                    circle.GetComponent<CircleController>().currentSpoke = ammo;
+                }
+                else
+                {
+                    circle.GetComponent<CircleController>().currentSpoke = null;
                 }
             } 
+
+
         }
         
     }

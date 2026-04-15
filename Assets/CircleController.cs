@@ -6,6 +6,7 @@ public class CircleController : MonoBehaviour
 {
     public float rotationSpeed;
     public GameObject spokePrefab;
+    
     public float offset;
     public float clockwise; // 1 for clockwise, -1 for counterclockwise
     public float[][] levels = new float[][]
@@ -14,6 +15,8 @@ public class CircleController : MonoBehaviour
         new float[] {1, 2, 2, 50, 1}
     };
     public int level;
+
+    public GameObject currentSpoke;
     public int ammoLeft;
     public TMPro.TextMeshProUGUI ammoText;
     public TMPro.TextMeshProUGUI levelText;
@@ -38,9 +41,9 @@ public class CircleController : MonoBehaviour
             //set ammo
             ammoLeft = (int)levels[level][2];
             //create first Ammo
-            GameObject ammo = Instantiate(spokePrefab, new Vector2(0, -2f), new Quaternion(0, 0, 0, 0));
+            GameObject ammo = Instantiate(spokePrefab, new Vector2(0, -2f), Quaternion.identity);
             ammo.GetComponent<SpokeController>().onMiddle = false;
-            ammoLeft--;
+            currentSpoke = ammo;
         }
         else //Menu Screen setting
         {
@@ -56,17 +59,25 @@ public class CircleController : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime * clockwise);
-        if(SceneManager.GetActiveScene().name == "Game" && ammoLeft <= 0)
+        if(SceneManager.GetActiveScene().name == "Game" && ammoLeft <= 0 && currentSpoke == null)
         {
-            SceneManager.LoadScene("MainMenu");
+            GameData.level++;
+            SceneManager.LoadScene("InBetweenLevels");
         }
-        ammoText.text = ammoLeft.ToString();
-        levelText.text = "Level: " + (level + 1).ToString();
+        if(SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            ammoText.text = (ammoLeft).ToString();
+            levelText.text = (level+1).ToString();
+        }
+        
     }
 
     public void StartGame()
     {
-        GameData.level = 0;
+        if(level < 0)
+        {
+            GameData.level = 0;
+        }
         SceneManager.LoadScene("Game");
     }
 }

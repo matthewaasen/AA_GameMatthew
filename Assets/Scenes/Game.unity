@@ -905,9 +905,10 @@ MonoBehaviour:
   offset: 0
   clockwise: 1
   level: 0
+  currentSpoke: {fileID: 0}
   ammoLeft: 0
-  ammoText: {fileID: 0}
-  levelText: {fileID: 0}
+  ammoText: {fileID: 1530705741}
+  levelText: {fileID: 1666623933}
 --- !u!1001 &5301506256771058633
 PrefabInstance:
   m_ObjectHideFlags: 0
