@@ -12,7 +12,11 @@ public class CircleController : MonoBehaviour
     public float[][] levels = new float[][]
     {
         //level, spokes, ammo, speed, direction
-        new float[] {1, 2, 2, 50, 1}
+        new float[] {1, 2, 2, 50, 1},
+        new float[] {2, 2, 5, 50, 1},
+        new float[] {3, 3, 5, 50, 1},
+        new float[] {3, 3, 5, 75, 1},
+
     };
     public int level;
 
