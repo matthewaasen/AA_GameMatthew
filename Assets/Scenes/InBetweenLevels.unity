@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 360210539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.004712404, z: 0, w: 0.999989}
-  m_LocalPosition: {x: 5.08, y: -33.49, z: 0}
+  m_LocalPosition: {x: 5.08, y: -57.9, z: 0}
   m_LocalScale: {x: 1.87, y: 1.87, z: 1.87}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -385,6 +385,10 @@ PrefabInstance:
     - target: {fileID: 4332713952317203962, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
       propertyPath: m_Name
       value: Spoke (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588362031891921361, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5857235437362337229, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
@@ -602,6 +606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spoke (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5588362031891921361, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5857235437362337229, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
     m_RemovedGameObjects: []
@@ -783,6 +791,10 @@ PrefabInstance:
     - target: {fileID: 4332713952317203962, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
       propertyPath: m_Name
       value: Spoke (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588362031891921361, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5857235437362337229, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
@@ -1041,6 +1053,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spoke (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5588362031891921361, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5857235437362337229, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
     m_RemovedGameObjects: []
@@ -1119,6 +1135,10 @@ PrefabInstance:
     - target: {fileID: 4332713952317203962, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
       propertyPath: m_Name
       value: Spoke (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588362031891921361, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5857235437362337229, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
@@ -1289,7 +1309,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -1373,6 +1393,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5588362031891921361, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5857235437362337229, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
     m_RemovedGameObjects: []
@@ -1452,6 +1476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spoke (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5588362031891921361, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5857235437362337229, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
     m_RemovedGameObjects: []
@@ -1530,6 +1558,10 @@ PrefabInstance:
     - target: {fileID: 4332713952317203962, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
       propertyPath: m_Name
       value: Spoke (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588362031891921361, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5857235437362337229, guid: 00d0ba74a2bdd49979e8c5d8465f54b8, type: 3}
